@@ -26,12 +26,6 @@ public class PalindromeService {
     @Async
     public CompletableFuture<PalindromeResponse> processPalindrome(String curPalindrome) {
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         Palindrome palindrome = palMapper.toEntity(curPalindrome);
 
         palindrome.setLength(curPalindrome.length());
